@@ -1,0 +1,6 @@
+---
+phpmyadmin_packages:
+  - phpmyadmin
+
+phpmyadmin_link_dir: /home/doc_root/
+phpmyadmin_link_name: phpmyadmin
