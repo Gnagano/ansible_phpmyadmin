@@ -7,7 +7,6 @@
   with_items: "{{ phpmyadmin_packages }}"
 
 - name: setup / create the symbolic link to phpmyadmin
-  #become_user: "{{}}"
   file:
     src:  /usr/share/phpmyadmin
     dest: "{{ phpmyadmin_link_dir }}/{{ phpmyadmin_link_name }}"
