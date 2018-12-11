@@ -1,0 +1,15 @@
+---
+- name: install / phpmyadmin
+  package:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items: "{{ phpmyadmin_packages }}"
+
+- name: setup / create the symbolic link to phpmyadmin
+  #become_user: "{{}}"
+  file:
+    src:  /usr/share/phpmyadmin
+    dest: "{{ phpmyadmin_link_dir }}/{{ phpmyadmin_link_name }}"
+    state: link
+    force: true
